@@ -16,7 +16,7 @@ const Transactiontable = () => {
 
     let response = async () =>{
         setLoading(true);
-        let result =await axios.get('http://localhost:4000/combineddata',{
+        let result =await axios.get('https://roxiler-server.onrender.com/combineddata',{
             params:{
                 month: selectedOption,
                 search:searchtext,
