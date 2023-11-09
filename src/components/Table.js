@@ -47,7 +47,7 @@ const Table = ({fetcheddata,total,perpage,page,setPage,loading}) => {
 </table>
 <div className='d-flex justify-content-center align-items-center '>
 <button disabled={page===1} onClick={previouspage} className='btn border-end' style={{border:0}}>❮ Previous</button>
-<button disabled={Math.floor(total/perpage)===(page-1)} className='btn border-start' style={{border:0}} onClick={nextPage}>Next ❯</button>
+<button disabled={Math.floor(total/perpage)>=(page-1)} className='btn border-start' style={{border:0}} onClick={nextPage}>Next ❯</button>
 </div>
     </div>
   )
