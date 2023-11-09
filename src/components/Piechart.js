@@ -4,7 +4,7 @@ import {Chart as ChartJS,ArcElement,Tooltip,Legend} from 'chart.js';
 
 ChartJS.register(ArcElement,Tooltip,Legend)
 
-const Piechart = ({data}) => {
+const Piechart = ({data,selectedOption}) => {
     const chartData = {
         labels: data?.map(item => Object.keys(item)[0]), // Extract labels from the keys
         datasets: [
@@ -23,7 +23,8 @@ const Piechart = ({data}) => {
     };
   return (
     <>
-    <div style={{padding:"20px",width:"50%"}}>
+    <div className='col-4 offset-4 text-center' style={{padding:"20px"}}>
+    <p style={{fontWeight:"bold",fontSize:"26px",color:"red"}}>Pie Chart Stats-{selectedOption}</p>
     <Pie data={chartData}/>
     </div>
     </>

@@ -4,7 +4,7 @@ import {Bar} from 'react-chartjs-2';
 
 ChartJS.register(BarElement,CategoryScale,LinearScale,Tooltip,Legend)
 
-const BarChart = ({data}) => {
+const BarChart = ({data,selectedOption}) => {
     // console.log(data)
     const chartData = {
         labels: data?.map(item => item.priceRange).reverse(),
@@ -20,6 +20,7 @@ const BarChart = ({data}) => {
               'rgba(255, 99, 50, 0.6)',
               // Add more colors if you have more data
             ],
+            barThickness:50
           },
         ],
       };
@@ -35,9 +36,12 @@ const BarChart = ({data}) => {
           },
       };
   return (
-    <div>
-      <Bar data={chartData} options={options}/>
-    </div>
+    // <div className='d-flex justify-content-center'>
+    <div className='col-6 offset-3 text-center'>
+      <p style={{fontWeight:"bold",fontSize:"26px",color:"red"}}>Bar Chart Stats-{selectedOption}</p>
+      <Bar  data={chartData} options={options} />
+      </div>
+    // </div>
   )
 }
 

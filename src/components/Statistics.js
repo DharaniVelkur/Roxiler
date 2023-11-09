@@ -1,14 +1,17 @@
 import React from 'react'
 
-const Statistics = ({data}) => {
+const Statistics = ({data,selectedOption}) => {
+ 
   return (
-    <>
-    <h1>Statistics</h1>
-    <p>{`Total Sale: ${data?.totalSaleAmount}`}</p>
-    <p>{`Total sold item: ${data?.soldItemsCount}`}</p>
-    <p>{`Total not sold item: ${data?.unsoldItemsCount}`}</p>
-    </>
+    <div className='d-flex flex-column justify-content-center align-items-center'>
+    <p className='fw-bold text-center pt-3' style={{fontSize:"26px",color:"red"}}>Statistics-{selectedOption}</p>
+    <div className='text-center p-2' style={{backgroundColor:"#F8DF8C",borderRadius:"8px"}}>
+     <p style={{fontWeight:'bold'}}>{`Total Sale: ${data?.totalSaleAmount}`}</p>
+     <p style={{fontWeight:'bold'}}>{`Total sold item: ${data?.soldItemsCount}`}</p>
+     <p style={{fontWeight:'bold'}}>{`Total not sold item: ${data?.unsoldItemsCount}`}</p>
+    </div>
+    </div>
   )
 }
 
-export default Statistics
+export default Statistics;

@@ -1,0 +1,27 @@
+.custom-select{
+    /* appearance: none; */
+  /* -webkit-appearance: none;
+  -moz-appearance: none; */
+  background-color: #f4f4f4; 
+  padding: 8px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  outline: none;
+}
+
+.custom-select::after {
+    content: '\25BC'; /* Unicode for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the arrow doesn't interfere with the click */
+  }
+
+  .searchtext{
+    background-color: #f4f4f4;
+    /* border: none; */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+  }
