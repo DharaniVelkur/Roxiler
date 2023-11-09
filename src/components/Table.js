@@ -14,7 +14,7 @@ const Table = ({fetcheddata,total,perpage,page,setPage,loading}) => {
   return (
     loading ? (
       <SkeletonTheme color="#f3f3f3" highlightColor="#e6e6e6">
-        <Skeleton count={10} height={60} /> {/* Adjust count and height as needed */}
+        <Skeleton count={10} height={60} /> 
       </SkeletonTheme>
     ) :
     <div className='overflow-auto'>
