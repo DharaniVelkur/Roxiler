@@ -37,7 +37,7 @@ const BarChart = ({data,selectedOption}) => {
       };
   return (
     // <div className='d-flex justify-content-center'>
-    <div className='col-6 offset-3 text-center'>
+    <div className='col-12 offset-0 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 text-center'>
       <p style={{fontWeight:"bold",fontSize:"26px",color:"red"}}>Bar Chart Stats-{selectedOption}</p>
       <Bar  data={chartData} options={options} />
       </div>

@@ -38,8 +38,8 @@ const Transactiontable = () => {
     <>
     <p className='fw-bold text-center pt-3' style={{fontSize:"36px",color:"orange"}}>Transaction Dashboard</p>
     <div className='d-flex justify-content-between align-items-center'>
-    <input type='text' value={searchtext} onChange={e=>setSearchtext(e.target.value)} className=' my-4 searchtext col-3' placeholder='Search transactions...'/>
-    <select value={selectedOption} onChange={e=>setSelectedOption(e.target.value)} className='custom-select my-4 col-3'>
+    <input type='text' value={searchtext} onChange={e=>setSearchtext(e.target.value)} className=' my-4 searchtext col-5 col-lg-3' placeholder='Search transactions...'/>
+    <select value={selectedOption} onChange={e=>setSelectedOption(e.target.value)} className='custom-select my-4 col-5  col-lg-3'>
         <option value="1">January</option>
         <option value="2">February</option>
         <option value="3">March</option>
@@ -69,8 +69,8 @@ const Transactiontable = () => {
                 </div>
             ) : (
                 <>
-                    <Statistics data={fetcheddata?.statistics} selectedOption={monthnames[selectedOption - 1]} />
-                    <BarChart data={fetcheddata?.barChart} selectedOption={monthnames[selectedOption - 1]} />
+                    <Statistics data={fetcheddata?.statistics} selectedOption={monthnames[selectedOption - 1]} /><br/>
+                    <BarChart data={fetcheddata?.barChart} selectedOption={monthnames[selectedOption - 1]} /><br/>
                     <Piechart data={fetcheddata?.pieChart} selectedOption={monthnames[selectedOption - 1]} />
                 </>
             )}

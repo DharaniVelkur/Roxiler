@@ -23,8 +23,8 @@ const Piechart = ({data,selectedOption}) => {
     };
   return (
     <>
-    <div className='col-4 offset-4 text-center' style={{padding:"20px"}}>
-    <p style={{fontWeight:"bold",fontSize:"26px",color:"red"}}>Pie Chart Stats-{selectedOption}</p>
+    <div className='col-10 offset-1 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 text-center' style={{padding:"20px"}}>
+    <p style={{fontWeight:"bold",fontSize:"26px",color:"red"}} className='mb-5 mb-lg-2'>Pie Chart Stats-{selectedOption}</p>
     <Pie data={chartData}/>
     </div>
     </>
